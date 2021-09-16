@@ -1,0 +1,77 @@
+@import '../component.scss';
+
+.container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 27px;
+  height: 42px;
+  width: 100%;
+  padding: 0 20px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.primary {
+  background: $secondary-color;
+  color: $font-color;
+  font-size: 14px;
+  font-weight: bold;
+
+  &:hover {
+    background: $primary-color;
+    color: #fff;
+  }
+}
+
+.secondary {
+  background: #fff;
+  color: $font-color;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid $secondary-color;
+
+  &:hover {
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}
+
+.icon {
+  display: none;
+  position: absolute;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+
+  svg {
+    width: 60%;
+
+    path {
+      fill: $primary-color;
+    }
+  }
+}
+
+.order {
+  position: relative;
+  padding-right: 45px;
+  width: 100%;
+  background: $primary-color;
+  color: #fff;
+
+  .text {
+    font-size: 16px;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  &:hover {
+    background: darken($primary-color, 5%);
+  }
+}

@@ -1,0 +1,71 @@
+@import '../component.scss';
+
+.container {
+  position: sticky;
+  top: 0;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.menu {
+  &Link {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+@include _desktop {
+  .menu {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 40px);
+    padding: 20px 10px;
+    right: 100%;
+    transition: .3s;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 100;
+
+    &--open {
+      right: 0;
+    }
+
+    &Item {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@include desktop() {
+  .menu {
+    flex: 1;
+
+    &List {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+    }
+
+    &Item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    &Link {
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}

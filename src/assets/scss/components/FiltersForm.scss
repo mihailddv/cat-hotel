@@ -1,0 +1,35 @@
+@import '../component.scss';
+
+.container {
+  margin-bottom: 40px;
+}
+
+.filtersList {
+  margin-bottom: 40px;
+}
+
+.filtersPrice {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &>[class^="Button"] {
+    max-width: 185px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@include desktop {
+  .container {
+    margin-bottom: 0;
+  }
+}

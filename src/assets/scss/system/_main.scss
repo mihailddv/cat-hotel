@@ -1,0 +1,124 @@
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+@include desktop {
+  html {
+    font-size: 18px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: $font-color;
+  font-size: 16px;
+  font-family: Roboto, Arial, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  // background: $mainBg;
+}
+
+.body {
+  &--no-scroll {
+    overflow-y: hidden;
+  }
+}
+
+main.content {
+  flex: 1 0 auto;
+}
+
+ul[class] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 0;
+  }
+}
+
+ul:not([class]) {
+  margin: 0;
+  padding-left: 20px;
+
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  color: inherit;
+  transition: 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.3s;
+
+  path {
+    transition: 0.3s;
+  }
+}
+
+[v-cloak] {
+  display: none;
+}
+
+// animation
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

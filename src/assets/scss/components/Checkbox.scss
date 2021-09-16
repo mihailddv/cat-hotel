@@ -1,0 +1,23 @@
+@import '../component.scss';
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid $border-color;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: .3s;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.input {
+  display: none;
+}
